@@ -1,7 +1,7 @@
 // here i am importing DinosData
 import Data from './dinos.js';
 
-import { name, heightf, heighti, weight, diet  } from './userData.js';
+import { name, heightf, heighti, weight, diet } from './userData.js';
 // createElements
 
 
@@ -97,9 +97,10 @@ const dinosaurObj = Dinosaurs.map(dinosaur =>
 
         (function validationFunc(){
     
-            if(name.value == ""){
+            if(name.value === ""){
                 name.classList.add('error');
-                alert('add name');
+                alert('add name please');
+
             } if(heightf.value === ""){
     
               heightf.classList.add('error')
@@ -115,9 +116,7 @@ const dinosaurObj = Dinosaurs.map(dinosaur =>
               weight.classList.add('error')
              
               alert('add ')
-          }else {
-        
-          }
+          } 
         })();
                 let height = Math.floor((Number(heightf.value) + Number((heighti.value)))/12);
 
@@ -197,9 +196,9 @@ const {userHeight, userWeight, userDiet, species, fact, where, when}=obj;
   divTiles.appendChild(h3);
   divTiles.appendChild(image);
   divTiles.appendChild(p);
-  fragment.appendChild(divTiles);
+  return fragment.appendChild(divTiles);
 
-  return fragment;
+
             });
 const grid = document.getElementById('grid');
 tiles.forEach(tile=>grid.appendChild(tile));

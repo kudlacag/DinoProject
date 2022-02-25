@@ -11,3 +11,4 @@ export const image = document.createElement('img');
 export const p = document.createElement('p');
 export const h3 = document.createElement('h3');
 export const  fragment = document.createDocumentFragment();
+
